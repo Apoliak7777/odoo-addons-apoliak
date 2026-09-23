@@ -46,9 +46,9 @@ class AccountMove(models.Model):
 
         # 2. Načítanie nastavení
         ICP = self.env['ir.config_parameter'].sudo()
-        provider = ICP.get_param('ai_invoice_extractor.provider', 'gemini')
-        api_key = ICP.get_param('ai_invoice_extractor.api_key', '').strip()
-        auto_create_partner = ICP.get_param('ai_invoice_extractor.auto_create_partner', 'True') == 'True'
+        provider = ICP.get_param('apoliak_ai_invoice_extractor.provider', 'gemini')
+        api_key = ICP.get_param('apoliak_ai_invoice_extractor.api_key', '').strip()
+        auto_create_partner = ICP.get_param('apoliak_ai_invoice_extractor.auto_create_partner', 'True') == 'True'
 
         if not api_key:
             raise UserError(_("Nie je nastavený AI API kľúč. Nastavte ho v Fakturácia -> Konfigurácia -> Nastavenia -> AI Invoice Extractor."))
