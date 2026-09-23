@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+        .oe_styling_v8 {
+            font-family: 'Montserrat', 'Segoe UI', Roboto, sans-serif;
+            color: #2b2b2b;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+        .hero-banner {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+            color: #ffffff;
+            padding: 50px 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(49, 46, 129, 0.2);
+        }
+        .hero-title {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        .hero-subtitle {
+            font-size: 18px;
+            color: #c7d2fe;
+            max-width: 750px;
+            margin: 0 auto 24px;
+        }
+        .badge-pill {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .feature-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-3px);
+            border-color: #6366f1;
+        }
+        .feature-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        .feature-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+        .feature-desc {
+            font-size: 14px;
+            color: #64748b;
+        }
+        .roi-box {
+            background: #ecfdf5;
+            border: 2px dashed #10b981;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .roi-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: #065f46;
+            margin-bottom: 10px;
+        }
+        .step-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .step-item {
+            flex: 1;
+            min-width: 200px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            background: #6366f1;
+            color: #ffffff;
+            font-weight: bold;
+            margin: 0 auto 12px;
+        }
+    </style>
+</head>
+<body class="oe_styling_v8">
+    <div style="max-width: 1000px; margin: 0 auto; padding: 20px;">
+        
+        <!-- HERO -->
+        <div class="hero-banner">
+            <span class="badge-pill">⚡ Odoo 16, 17, 18, 19 Compatible</span>
+            <h1 class="hero-title">AI Vendor Bill & Invoice Extractor</h1>
+            <p class="hero-subtitle">
+                Automate vendor bill entry in seconds using cutting-edge AI. Extract partners, invoice numbers, dates, line items and taxes without paying expensive Odoo IAP credits.
+            </p>
+        </div>
+
+        <!-- ROI SAVINGS BOX -->
+        <div class="roi-box">
+            <div class="roi-title">💰 Why pay 0.20 € per invoice to Odoo IAP?</div>
+            <p style="color: #047857; font-size: 15px; margin: 0;">
+                Official Odoo OCR charges expensive monthly credits. With this module, you connect your own Gemini or OpenAI API key.
+                <strong>1,000 invoices cost less than 0.50 € total!</strong> The module pays for itself within the first month.
+            </p>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="feature-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🔍</span>
+                <h3 class="feature-title">Smart Partner Auto-Matching</h3>
+                <p class="feature-desc">Detects VAT ID, Tax ID (IČO/DIČ), and company names. Automatically links the bill to existing partners or creates a new partner with verified details.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📑</span>
+                <h3 class="feature-title">Accurate Line Items & Taxes</h3>
+                <p class="feature-desc">Parses complex tables, extracting item descriptions, quantities, unit prices, and tax rates directly into invoice lines.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🌍</span>
+                <h3 class="feature-title">Multi-Language & Multi-Currency</h3>
+                <p class="feature-desc">Works flawlessly with Slovak, Czech, English, German, French, Polish, Hungarian and global international invoices.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🚀</span>
+                <h3 class="feature-title">1-Click or Zero-Click Upload</h3>
+                <p class="feature-desc">Drag and drop any PDF bill into Odoo. Click "Extract with AI" or let the system extract automatically on draft creation.</p>
+            </div>
+        </div>
+
+        <!-- HOW IT WORKS -->
+        <h2 style="text-align: center; margin-bottom: 24px; font-weight: 800; color: #1e293b;">How It Works in 3 Simple Steps</h2>
+        <div class="step-container">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h4 style="margin: 0 0 6px;">Attach PDF Bill</h4>
+                <p style="font-size: 13px; color: #64748b; margin: 0;">Drag and drop the supplier's invoice PDF into a new Draft Bill.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h4 style="margin: 0 0 6px;">Click AI Extract</h4>
+                <p style="font-size: 13px; color: #64748b; margin: 0;">Hit the "AI Vyťažiť faktúru" button on the bill header.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h4 style="margin: 0 0 6px;">Done & Verified</h4>
+                <p style="font-size: 13px; color: #64748b; margin: 0;">All partner details, dates, numbers, and items are populated in 3 seconds.</p>
+            </div>
+        </div>
+
+        <!-- FOOTER & SUPPORT -->
+        <div style="background: #f1f5f9; border-radius: 12px; padding: 24px; text-align: center;">
+            <h4 style="margin: 0 0 8px; color: #1e293b;">Need customization or assistance?</h4>
+            <p style="font-size: 14px; color: #64748b; margin: 0 0 12px;">Developed by <strong>Alex Poliak</strong>. Full source code included, no license lock.</p>
+            <a href="mailto:apoliak@apoliak.online" style="display: inline-block; background: #4f46e5; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px;">Contact Support (apoliak@apoliak.online)</a>
+        </div>
+
+    </div>
+</body>
+</html>

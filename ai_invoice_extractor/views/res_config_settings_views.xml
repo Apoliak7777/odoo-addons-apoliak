@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_ai_invoice" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.ai.invoice</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="90"/>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='account_vendor_bills']" position="after">
+                <block title="AI Invoice &amp; Bill Extractor" id="ai_invoice_extractor_settings">
+                    <setting id="ai_invoice_provider_setting" string="AI Model" help="Vyberte AI model použitý na bezpoplatkové OCR a vyťažovanie PDF.">
+                        <div class="content-group">
+                            <div class="mt16 row">
+                                <label for="ai_invoice_provider" class="col-3 o_light_label"/>
+                                <field name="ai_invoice_provider" class="col-9"/>
+                            </div>
+                            <div class="mt8 row">
+                                <label for="ai_invoice_api_key" class="col-3 o_light_label"/>
+                                <field name="ai_invoice_api_key" password="True" class="col-9"/>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting id="ai_invoice_automation_setting" string="Automatizácia partnerov" help="Automatické vytvorenie dodávateľa ak sa nenájde v databáze.">
+                        <field name="ai_invoice_auto_create_partner"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>
