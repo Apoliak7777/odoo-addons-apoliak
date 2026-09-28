@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Pay by Square (SK) & QR Platba (CZ) — Invoice QR Code',
-    'version': '18.0.1.0.0',
+    'version': '17.0.1.0.0',
     'category': 'Accounting/Localizations',
     'summary': 'Official Slovak Pay by Square (SBA) & Czech QR Platba (SPD) on Odoo PDF Invoices. Offline, zero API fees.',
     'description': """
