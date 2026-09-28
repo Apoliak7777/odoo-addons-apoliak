@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_apoliak_finstat" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.apoliak.finstat</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="90"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="SK/CZ Auto-Fill (FinStat &amp; ARES)" string="SK/CZ Auto-Fill" name="apoliak_finstat_ares">
+                    <block title="Slovakia &amp; Czechia Company Registers (RÚZ, FinStat, ARES)" id="apoliak_finstat_block">
+                        <setting id="apoliak_finstat_keys" string="FinStat.sk API (Voliteľné)" help="Pre základné načítanie SK (RÚZ) a CZ (ARES) nie je potrebný žiadny kľúč.">
+                            <div class="content-group">
+                                <div class="mt16 row">
+                                    <label for="apoliak_finstat_api_key" class="col-3 o_light_label"/>
+                                    <field name="apoliak_finstat_api_key" class="col-9"/>
+                                </div>
+                                <div class="mt8 row">
+                                    <label for="apoliak_finstat_private_key" class="col-3 o_light_label"/>
+                                    <field name="apoliak_finstat_private_key" password="True" class="col-9"/>
+                                </div>
+                            </div>
+                        </setting>
+                        <setting id="apoliak_vies_check_setting" string="EU VIES kontrola DPH" help="Automatické overenie platnosti IČ DPH pri načítaní subjektu.">
+                            <field name="apoliak_auto_check_vies"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>

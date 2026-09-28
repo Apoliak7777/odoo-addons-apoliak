@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document_inherit_apoliak_pbs" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@name='comment']" position="before">
+            <div t-if="o.apoliak_qr_image and o.move_type == 'out_invoice'" class="row mt-4 mb-2" style="page-break-inside: avoid;">
+                <div class="col-4">
+                    <div style="border: 1px solid #dee2e6; border-radius: 6px; padding: 10px; text-align: center; display: inline-block;">
+                        <img t-att-src="image_data_uri(o.apoliak_qr_image)" style="width: 130px; height: 130px;" alt="Pay by Square QR"/>
+                        <div style="font-size: 10px; font-weight: bold; margin-top: 4px; color: #333;">
+                            <span t-if="o.apoliak_qr_format == 'pbs'">PAY by square</span>
+                            <span t-else="">QR Platba</span>
+                        </div>
+                        <div t-if="o.apoliak_variable_symbol" style="font-size: 10px; color: #555;">
+                            VS: <span t-field="o.apoliak_variable_symbol"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

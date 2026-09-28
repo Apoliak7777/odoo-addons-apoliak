@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_apoliak_accounting_export_wizard_form" model="ir.ui.view">
+        <field name="name">apoliak.accounting.export.wizard.form</field>
+        <field name="model">apoliak.accounting.export.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Export do Pohoda / KROS Omega">
+                <group>
+                    <group>
+                        <field name="export_system"/>
+                        <field name="move_types"/>
+                    </group>
+                    <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                    </group>
+                </group>
+                <group invisible="not exported_file">
+                    <div class="alert alert-success" role="alert" colspan="2">
+                        <strong>✓ Export pripravený!</strong> Stiahnite si vygenerovaný súbor nižšie a naimportujte ho do účtovníctva.
+                    </div>
+                    <field name="export_count"/>
+                    <field name="exported_filename" invisible="1"/>
+                    <field name="exported_file" filename="exported_filename"/>
+                </group>
+                <footer>
+                    <button name="action_generate_export" string="🚀 Vygenerovať XML / TXT export" type="object" class="btn-primary"/>
+                    <button string="Zavrieť" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_apoliak_accounting_export_wizard" model="ir.actions.act_window">
+        <field name="name">Export Pohoda / KROS Omega</field>
+        <field name="res_model">apoliak.accounting.export.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_apoliak_kros_pohoda_export"
+              name="Export Pohoda / KROS XML"
+              parent="account.menu_finance_entries"
+              action="action_apoliak_accounting_export_wizard"
+              sequence="95"/>
+</odoo>

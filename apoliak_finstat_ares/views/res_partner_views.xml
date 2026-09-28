@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherit_apoliak_finstat" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.apoliak.finstat</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="before">
+                <label for="sk_cz_ico" string="IČO (SK / CZ)"/>
+                <div class="o_row">
+                    <field name="sk_cz_ico" placeholder="napr. 36361558"/>
+                    <button name="action_fetch_finstat_ares"
+                            string="🔍 Načítať z RÚZ / ARES / FinStat"
+                            type="object"
+                            class="btn-secondary"/>
+                </div>
+                <field name="sk_cz_dic" placeholder="napr. 2021863811"/>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="vies_vat_status" widget="badge"
+                       decoration-success="vies_vat_status == 'valid'"
+                       decoration-danger="vies_vat_status == 'invalid'"/>
+                <field name="finstat_debtor_warning" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

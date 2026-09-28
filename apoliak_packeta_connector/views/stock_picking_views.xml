@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_picking_form_inherit_apoliak_packeta" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.apoliak.packeta</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_send_to_packeta"
+                        string="📦 Odoslať do Packety &amp; Štítok"
+                        type="object"
+                        class="btn-primary"
+                        invisible="packeta_barcode"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Packeta (Zásielkovňa)" name="packeta_shipping_tab">
+                    <group>
+                        <group string="Parametre zásielky">
+                            <field name="packeta_point_id"/>
+                            <field name="packeta_point_name"/>
+                            <field name="packeta_weight"/>
+                            <field name="packeta_cod_amount"/>
+                        </group>
+                        <group string="Stav a Štítok Packeta">
+                            <field name="packeta_barcode"/>
+                            <field name="packeta_packet_id"/>
+                            <field name="packeta_label_filename" invisible="1"/>
+                            <field name="packeta_label_pdf" filename="packeta_label_filename"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

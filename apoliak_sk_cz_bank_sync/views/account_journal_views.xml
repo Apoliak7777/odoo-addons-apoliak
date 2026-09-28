@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_journal_form_inherit_apoliak_bank" model="ir.ui.view">
+        <field name="name">account.journal.form.inherit.apoliak.bank</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="SK / CZ Bank API Sync" name="apoliak_bank_sync_page" invisible="type != 'bank'">
+                    <group>
+                        <group string="Nastavenie automatického sťahovania">
+                            <field name="apoliak_bank_sync_provider"/>
+                            <field name="apoliak_fio_api_token" password="True" invisible="apoliak_bank_sync_provider != 'fio'"/>
+                            <field name="apoliak_last_sync_date"/>
+                        </group>
+                        <group string="Akcie">
+                            <button name="action_sync_sk_cz_bank"
+                                    string="🔄 Stiahnuť výpisy a spárovať VS"
+                                    type="object"
+                                    class="btn-primary"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

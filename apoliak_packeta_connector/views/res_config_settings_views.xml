@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_apoliak_packeta" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.apoliak.packeta</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="90"/>
+        <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <block title="Packeta (Zásielkovňa) SK &amp; CZ Connector" id="apoliak_packeta_settings_block">
+                    <setting id="apoliak_packeta_api_setting" string="Packeta API prístup" help="Zadajte API heslo a identifikátor odosielateľa z klientskej sekcie Packeta.">
+                        <div class="content-group">
+                            <div class="mt16 row">
+                                <label for="apoliak_packeta_api_password" class="col-3 o_light_label"/>
+                                <field name="apoliak_packeta_api_password" password="True" class="col-9"/>
+                            </div>
+                            <div class="mt8 row">
+                                <label for="apoliak_packeta_eshop_sender" class="col-3 o_light_label"/>
+                                <field name="apoliak_packeta_eshop_sender" class="col-9"/>
+                            </div>
+                            <div class="mt8 row">
+                                <label for="apoliak_packeta_label_format" class="col-3 o_light_label"/>
+                                <field name="apoliak_packeta_label_format" class="col-9"/>
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>
