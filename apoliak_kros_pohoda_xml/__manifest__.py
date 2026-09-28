@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'KROS Omega & Stormware Pohoda XML Accounting Bridge',
-    'version': '18.0.1.0.0',
+    'version': '16.0.1.0.0',
     'category': 'Accounting/Localizations',
     'summary': '1-Click export of Odoo Customer Invoices & Vendor Bills to KROS Omega and Stormware Pohoda XML.',
     'description': """

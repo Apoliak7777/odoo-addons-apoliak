@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'SK & CZ Bank Auto-Sync & VS Matcher (Fio API, Tatra, SLSP, ČSOB, VÚB)',
-    'version': '18.0.1.0.0',
+    'version': '16.0.1.0.0',
     'category': 'Accounting/Localizations',
     'summary': 'Automatic Slovak & Czech bank statement sync (Fio REST API & CAMT.053 XML) with automatic Variable Symbol (VS) invoice matching.',
     'description': """
