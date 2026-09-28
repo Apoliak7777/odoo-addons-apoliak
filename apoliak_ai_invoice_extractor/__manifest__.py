@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'AI Vendor Bill & Invoice Extractor (Zero-Cost OCR)',
-    'version': '18.0.1.0.0',
+    'version': '20.0.1.0.0',
     'category': 'Accounting/Accounting',
     'summary': 'Extract vendor bills, invoices, items, taxes and partners instantly using AI without expensive Odoo IAP credits.',
     'description': """

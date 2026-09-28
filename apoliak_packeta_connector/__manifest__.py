@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Packeta (Zásielkovňa) SK & CZ Shipping & Label Connector',
-    'version': '18.0.1.0.0',
+    'version': '20.0.1.0.0',
     'category': 'Inventory/Delivery',
     'summary': 'Direct Packeta (Zásielkovňa) API integration for Odoo: Pickup points, Z-BOX, COD, and 1-Click PDF/ZPL Label printing.',
     'description': """

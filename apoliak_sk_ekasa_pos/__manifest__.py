@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Slovak e-Kasa (ORP / FiskalPRO / Elcom) Fiscal Bridge',
-    'version': '18.0.1.0.0',
+    'version': '20.0.1.0.0',
     'category': 'Accounting/Localizations',
     'summary': 'Slovak Financial Administration e-Kasa integration (OKP, UID, DKP & Fiscal Printer bridge for FiskalPRO / Elcom).',
     'description': """
