@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'SK & CZ Company Auto-Fill (FinStat, RPO/RÚZ, ARES & VIES)',
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'category': 'Sales/CRM',
     'summary': 'Instant Slovak & Czech company lookup by IČO/VAT. Auto-fills Name, Address, DIČ, IČ DPH and checks VIES & tax debtors.',
     'description': """
